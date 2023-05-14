@@ -1,0 +1,11 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon books/books.js && nodemon customers/index.js "
+  },
+  "author": "",
+  "license": "ISC"
+}
