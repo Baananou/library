@@ -1,13 +1,11 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
-
   type Customer {
     name: String
     email: String
     age: Int
-    createdAt:String
-
+    createdAt: String
   }
 
   input CustomerInput {
