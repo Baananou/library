@@ -16,7 +16,7 @@ mongoose
   .connect(
     "mongodb+srv://baananou:baananou@cluster0.jxxcths.mongodb.net/SOCIAL_MEDIA?retryWrites=true&w=majority"
   )
-  .then(() => console.log("Connected To Database"))
+  .then(() => console.log("Books Microservice Connected To Database"))
   .then(() => {
     app.listen(5000);
   })
@@ -31,6 +31,7 @@ app.post("/book", (req, res) => {
   var newBook = {
     title: req.body.title,
     author: req.body.author,
+    description: req.body.description,
     pages: req.body.pages,
     category: req.body.category,
     available: req.body.available,
@@ -91,3 +92,7 @@ app.delete("/book/:id", (req, res) => {
       }
     });
 });
+
+app.put("/book/:id",(req,res)=>{
+  Book.findByIdAndUpdate(req.params.id,)
+})

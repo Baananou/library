@@ -9,6 +9,10 @@ mongoose.model("Book",{
         type: String,
         require: true
     },
+    description:{
+        type: String,
+        require: true
+    },
     pages:{
         type: Number,
         require: false
